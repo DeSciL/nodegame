@@ -23,7 +23,7 @@ var options = {
     // logDir: './log', // not working at the moment
     servernode: function(servernode) {
         // Special configuration for the ServerNode object.
-        
+
         // Adds a new game directory (Default is nodegame-server/games).
         servernode.gamesDirs.push('./games');
         // Sets the debug mode, exceptions will be thrown (Default is false).
@@ -31,7 +31,7 @@ var options = {
 
         return true;
     },
-    http: function(http) {
+    http: function(http,serverNode) {
         // Special configuration for Express goes here.
         return true;
     },
@@ -54,6 +54,10 @@ var options = {
 var sn = new ServerNode(options);
 
 sn.ready(function() {
+    var i = 0;
+    var pageNames = [];
+
+
     // Get the absolute path to the game directory.
     var ultimatumPath = sn.resolveGameDir('ultimatum');
     if (!ultimatumPath) {
@@ -68,7 +72,7 @@ sn.ready(function() {
         verbosity: 100,
         // If TRUE, players can invoke GET commands on admins.
         getFromAdmins: true,
-        // Unauthorized clients will be redirected here. 
+        // Unauthorized clients will be redirected here.
         // (defaults: "/pages/accessdenied.htm")
         accessDeniedUrl: '/ultimatum/unauth.htm'
     });
@@ -95,6 +99,21 @@ sn.ready(function() {
         name: 'requirementsWR'
     });
 
+    // TODO: Considering the hooks:
+    //sn.http.options.hook = ....;
+    // Handle jade templates.
+    this.http.gameHooks = [];
+    pageNames = ['bidder', 'ended', 'instructions', 'instructions_pp',
+                    'postgame','pregame', 'quiz', 'resp', 'solo', 'ultimatum'];
+    for (i = 0; i < pageNames.length; ++i) {
+        var tmp = pageNames[i];
+        sn.http.gameHooks[i] = {
+            file:  'html/' + pageNames[i] + '.html',
+            callback: function(req, res) {
+                res.render(ultimatumPath + 'view/' + tmp + '.jade',{});
+                }
+            };
+    }
 });
 
 // Exports the whole ServerNode.
