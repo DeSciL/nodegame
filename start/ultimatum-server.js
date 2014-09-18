@@ -102,19 +102,21 @@ sn.ready(function() {
     // TODO: Considering the hooks:
     //sn.http.options.hook = ....;
     // Handle jade templates.
-    this.http.gameHooks = [];
-    pageNames = ['bidder', 'ended', 'instructions', 'instructions_pp',
-                    'postgame','pregame', 'quiz', 'resp', 'solo', 'ultimatum'];
+    sn.http.gameHooks = [];
+    pageNames = ['bidder', 'ended', 'instructions','instructions_pp',
+                    'postgame','pregame', 'quiz', 'resp', 'solo', 'ultimatum' ];
     for (i = 0; i < pageNames.length; ++i) {
-        var tmp = pageNames[i];
-        sn.http.gameHooks[i] = {
-            file:  'html/' + pageNames[i] + '.html',
-            callback: function(req, res) {
-                res.render(ultimatumPath + 'view/' + tmp + '.jade',{});
-                }
+        sn.http.gameHooks[i] = (function (page){
+            return {
+                file:  'html/' + page + '.html',
+                callback: function(req, res) {
+                        res.render(ultimatumPath + 'view/' + page + '.jade',{});
+                    }
             };
+        })(pageNames[i]);
     }
 });
+
 
 // Exports the whole ServerNode.
 module.exports = sn;
