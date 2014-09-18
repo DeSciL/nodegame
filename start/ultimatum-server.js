@@ -104,7 +104,7 @@ sn.ready(function() {
     // Handle jade templates.
     sn.http.gameHooks = [];
     pageNames = ['bidder', 'ended', 'instructions','instructions_pp',
-                    'postgame','pregame', 'quiz', 'resp', 'solo', 'ultimatum' ];
+                    'postgame','pregame',  'resp', 'solo', 'ultimatum' ];
     for (i = 0; i < pageNames.length; ++i) {
         sn.http.gameHooks[i] = (function (page){
             return {
