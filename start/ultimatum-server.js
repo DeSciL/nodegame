@@ -51,26 +51,6 @@ var options = {
 
         return true;
     },
-    languages: [
-                {
-                    name: 'English',
-                    nativeName: 'English',
-                    shortName: 'en',
-                    flag: ''
-                },
-                {
-                    name: 'German',
-                    nativeName: 'Deutsch',
-                    shortName: 'de',
-                    flag: ''
-                },
-                {
-                    name: 'French',
-                    nativeName: 'Français',
-                    shortName: 'fr',
-                    flag: ''
-                }
-    ]
 };
 
 // Start server, options parameter is optional.
@@ -78,8 +58,6 @@ var sn = new ServerNode(options);
 
 sn.ready(function() {
     var i = 0;
-    var pageNames = [];
-
 
     // Get the absolute path to the game directory.
     var ultimatumPath = sn.resolveGameDir('ultimatum');
@@ -121,9 +99,6 @@ sn.ready(function() {
         logicPath: ultimatumPath + 'server/requirements.room.js',
         name: 'requirementsWR'
     });
-
-    pageNames = ['bidder', 'ended', 'instructions', 'instructions_pp',
-        'postgame', 'pregame', 'quiz', 'resp', 'solo', 'ultimatum'];
 });
 
 // Exports the whole ServerNode.
