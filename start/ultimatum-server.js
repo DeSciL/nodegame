@@ -50,7 +50,27 @@ var options = {
         // ]);
 
         return true;
-    }
+    },
+    languages: [
+                {
+                    name: 'English',
+                    nativeName: 'English',
+                    shortName: 'en',
+                    flag: ''
+                },
+                {
+                    name: 'German',
+                    nativeName: 'Deutsch',
+                    shortName: 'de',
+                    flag: ''
+                },
+                {
+                    name: 'French',
+                    nativeName: 'Français',
+                    shortName: 'fr',
+                    flag: ''
+                }
+    ]
 };
 
 // Start server, options parameter is optional.
@@ -104,86 +124,7 @@ sn.ready(function() {
 
     pageNames = ['bidder', 'ended', 'instructions', 'instructions_pp',
         'postgame', 'pregame', 'quiz', 'resp', 'solo', 'ultimatum'];
-    // Add language options to sn.
-    // TODO: Add language object to better storage object than sn.
-    // Object to shtore language information.
-    sn.lang = new LanguageSettings(pageNames,ultimatumPath + 'html/context/');
-
-    // Adds callbacks and paths to sn.http.gameHooks object.
-    function makeGameHookCallback(page) {
-        return function(req, res) {
-            console.log('Rendering Jade template ' + page + ' in ' +
-                sn.lang.currentLanguage.name);
-            res.render(ultimatumPath + 'html/view/' + page + '.jade',
-            sn.lang.currentLanguage.pages[page]);
-        };
-    }
-    sn.http.gameHooks = [];
-    for (i = 0; i < pageNames.length; ++i) {
-        sn.http.gameHooks[i] = {
-                                file: 'html/' + pageNames[i] + '.html',
-                                callback: makeGameHookCallback(pageNames[i])
-                               };
-    }
 });
-
-// TODO: Properly implement this stub and put it in the right place. This is not it.
-function LanguageSettings(pageNames,contextPath) {
-    var i = 0,
-        j = 0;
-
-    this.pageNames = pageNames;
-    this.contextPath = contextPath;
-
-    this.languages = []; // Array which stores all the languages
-    // Object which represents Enslish
-    this.languages[0] = {
-                        name: 'English',
-                        nativeName: 'English',
-                        shortName: 'en',
-                        pages: {},
-                        flag: '',
-                        loaded: false
-    };
-
-    this.languages[1] = {
-                        name: 'German',
-                        nativeName: 'Deutsch',
-                        shortName: 'de',
-                        pages: {},
-                        flag: '',
-                        loaded: false
-    };
-
-    this.languages[2] = {
-                        name: 'French',
-                        nativeName: 'Français',
-                        shortName: 'fr',
-                        pages: {},
-                        flag: '',
-                        loaded: false
-    }
-    // Initialize currentLanguage with English.
-    this.setLanguage(this.languages[0]);
-}
-
-// TODO: allow setting by shortname
-LanguageSettings.prototype.setLanguage = function(language) {
-    this.currentLanguage = language;
-    this.loadLanguage(language);
-}
-
-LanguageSettings.prototype.loadLanguage = function(language) {
-    var i = 0, data;
-    if (!language.loaded) {
-        for (i = 0; i < this.pageNames.length; ++i) {
-            data = fs.readFileSync(this.contextPath + language.shortName + '/' +
-                this.pageNames[i]+'.json');
-            language.pages[this.pageNames[i]] = JSON.parse(data);
-        }
-    }
-    language.loaded = true;
-};
 
 // Exports the whole ServerNode.
 module.exports = sn;
