@@ -57,7 +57,6 @@ var options = {
 var sn = new ServerNode(options);
 
 sn.ready(function() {
-    var i = 0;
 
     // Get the absolute path to the game directory.
     var ultimatumPath = sn.resolveGameDir('ultimatum');
