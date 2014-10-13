@@ -1,5 +1,5 @@
 #! /bin/bash
-# nodegame/bin
+# Execute in nodegame/bin.
 
 # nodegame/node_modules/nodegame-window
 cd ../node_modules/nodegame-window
@@ -16,4 +16,4 @@ node bin/make build-client -a -o nodegame-full
 
 # nodegame
 cd ../..
-node start/ultimatum-server.js
+node $1 start/ultimatum-server.js
