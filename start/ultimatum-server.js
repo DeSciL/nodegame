@@ -16,9 +16,6 @@ var path = require('path');
 // Load the ServerNode class.
 var ServerNode = require('nodegame-server').ServerNode;
 
-// Load the Node.js fs module for reading files.
-var fs = require('fs');
-
 // Overrides some of the default options for ServerNode.
 var options = {
     // Additional conf directory.
