@@ -2,7 +2,7 @@ module.exports = configure;
 
 var path = require('path');
 
-function configure (loggers) {
+function configure(loggers, logDir) {
 
 //	var config = {
 //		levels: {

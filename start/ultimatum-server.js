@@ -20,7 +20,7 @@ var ServerNode = require('nodegame-server').ServerNode;
 var options = {
     // Additional conf directory.
     confDir: './conf',
-    // logDir: './log', // not working at the moment
+    //logDir: './log', // directory has to exist
     servernode: function(servernode) {
         // Special configuration for the ServerNode object.
 
