@@ -1,0 +1,72 @@
+[{
+    "role": "RESPONDENT",
+    "player": "681244340026751",
+    "stage": {
+        "stage": 4,
+        "step": 1,
+        "round": 2
+    },
+    "timestamp": 1453838935185,
+    "session": "lgc100"
+}, {
+    "role": "BIDDER",
+    "player": "370513694360852",
+    "stage": {
+        "stage": 4,
+        "step": 1,
+        "round": 2
+    },
+    "timestamp": 1453838935693,
+    "session": "lgc100"
+}, {
+    "offer": 67,
+    "offer2": 66,
+    "time": 3180,
+    "player": "370513694360852",
+    "stage": {
+        "stage": 4,
+        "step": 1,
+        "round": 2
+    },
+    "timestamp": 1453838938875,
+    "session": "lgc100"
+}, {
+    "response": "ACCEPT",
+    "value": {
+        "offer": 67,
+        "offer2": 66
+    },
+    "from": "370513694360852",
+    "player": "681244340026751",
+    "stage": {
+        "stage": 4,
+        "step": 1,
+        "round": 2
+    },
+    "timestamp": 1453838941221,
+    "session": "lgc100"
+}, {
+    "time": 2338,
+    "timeup": false,
+    "done": true,
+    "player": "681244340026751",
+    "stage": {
+        "stage": 4,
+        "step": 1,
+        "round": 2
+    },
+    "timestamp": 1453838941222,
+    "session": "lgc100"
+}, {
+    "time": 8531,
+    "timeup": false,
+    "done": true,
+    "player": "370513694360852",
+    "stage": {
+        "stage": 4,
+        "step": 1,
+        "round": 2
+    },
+    "timestamp": 1453838943701,
+    "session": "lgc100"
+}]

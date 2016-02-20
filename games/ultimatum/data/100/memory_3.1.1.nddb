@@ -1,0 +1,67 @@
+[{
+    "__correct__": true,
+    "howMuch": [
+        1
+    ],
+    "reject": [
+        1
+    ],
+    "disconnect": [
+        1
+    ],
+    "timeUp": false,
+    "quiz": true,
+    "player": "840652690269053",
+    "stage": {
+        "stage": 3,
+        "step": 1,
+        "round": 1
+    },
+    "timestamp": 1455906905099,
+    "session": "lgc100"
+}, {
+    "time": 6164,
+    "timeup": false,
+    "done": true,
+    "player": "840652690269053",
+    "stage": {
+        "stage": 3,
+        "step": 1,
+        "round": 1
+    },
+    "timestamp": 1455906905101,
+    "session": "lgc100"
+}, {
+    "__correct__": true,
+    "howMuch": [
+        1
+    ],
+    "reject": [
+        1
+    ],
+    "disconnect": [
+        1
+    ],
+    "timeUp": false,
+    "quiz": true,
+    "player": "664635711116716",
+    "stage": {
+        "stage": 3,
+        "step": 1,
+        "round": 1
+    },
+    "timestamp": 1455906910065,
+    "session": "lgc100"
+}, {
+    "time": 11122,
+    "timeup": false,
+    "done": true,
+    "player": "664635711116716",
+    "stage": {
+        "stage": 3,
+        "step": 1,
+        "round": 1
+    },
+    "timestamp": 1455906910067,
+    "session": "lgc100"
+}]

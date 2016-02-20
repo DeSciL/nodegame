@@ -1,0 +1,49 @@
+[{
+    "questionnaire": true,
+    "q1": "",
+    "q2": -1,
+    "player": "510470564709976",
+    "stage": {
+        "stage": 6,
+        "step": 1,
+        "round": 1
+    },
+    "timestamp": 1453782629290,
+    "session": "lgc100"
+}, {
+    "questionnaire": true,
+    "q1": "",
+    "q2": -1,
+    "player": "750586607726290",
+    "stage": {
+        "stage": 6,
+        "step": 1,
+        "round": 1
+    },
+    "timestamp": 1453782629290,
+    "session": "lgc100"
+}, {
+    "time": 90997,
+    "timeup": true,
+    "done": true,
+    "player": "750586607726290",
+    "stage": {
+        "stage": 6,
+        "step": 1,
+        "round": 1
+    },
+    "timestamp": 1453782630288,
+    "session": "lgc100"
+}, {
+    "time": 90996,
+    "timeup": true,
+    "done": true,
+    "player": "510470564709976",
+    "stage": {
+        "stage": 6,
+        "step": 1,
+        "round": 1
+    },
+    "timestamp": 1453782630288,
+    "session": "lgc100"
+}]

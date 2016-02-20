@@ -1,0 +1,73 @@
+[{
+    "time": 279,
+    "timeup": false,
+    "done": true,
+    "player": "946500380523502",
+    "stage": {
+        "stage": 1,
+        "step": 1,
+        "round": 1
+    },
+    "timestamp": 1453905982888,
+    "session": "lgc100"
+}, {
+    "time": 295,
+    "timeup": false,
+    "done": true,
+    "player": "647714067483320",
+    "stage": {
+        "stage": 1,
+        "step": 1,
+        "round": 1
+    },
+    "timestamp": 1453905982907,
+    "session": "lgc100"
+}, {
+    "time": 318,
+    "timeup": false,
+    "done": true,
+    "player": "647714067483320",
+    "stage": {
+        "stage": 2,
+        "step": 1,
+        "round": 1
+    },
+    "timestamp": 1453905982932,
+    "session": "lgc100"
+}, {
+    "time": 321,
+    "timeup": false,
+    "done": true,
+    "player": "946500380523502",
+    "stage": {
+        "stage": 2,
+        "step": 1,
+        "round": 1
+    },
+    "timestamp": 1453905983025,
+    "session": "lgc100"
+}, {
+    "time": 104,
+    "timeup": false,
+    "done": true,
+    "player": "647714067483320",
+    "stage": {
+        "stage": 2,
+        "step": 1,
+        "round": 2
+    },
+    "timestamp": 1453905983037,
+    "session": "lgc100"
+}, {
+    "time": 104,
+    "timeup": false,
+    "done": true,
+    "player": "946500380523502",
+    "stage": {
+        "stage": 2,
+        "step": 1,
+        "round": 2
+    },
+    "timestamp": 1453905983545,
+    "session": "lgc100"
+}]

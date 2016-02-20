@@ -1,0 +1,25 @@
+[{
+    "time": 3350,
+    "timeup": true,
+    "done": true,
+    "player": "664635711116716",
+    "stage": {
+        "stage": 4,
+        "step": 2,
+        "round": 1
+    },
+    "timestamp": 1455906921957,
+    "session": "lgc100"
+}, {
+    "time": 4141,
+    "timeup": true,
+    "done": true,
+    "player": "840652690269053",
+    "stage": {
+        "stage": 4,
+        "step": 2,
+        "round": 1
+    },
+    "timestamp": 1455906923093,
+    "session": "lgc100"
+}]
